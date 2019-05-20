@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import './App.scss';
 
 class App extends Component {
+
+  // prepare for states
+  state = {
+    fruits : []
+  }
   
+  // init method
+  componentDidMount() {
+    this.setState({ fruits : ["apple1","apple2","apple3"]});
+  }
+
   // render method for this component
   render() {
     return (
@@ -13,7 +23,7 @@ class App extends Component {
 
         <div className="row-grid">
             <div className="col-item md-cover-2 lg-cover-4">
-              responsive length
+              There are { this.state.fruits.length  } fruits :)
             </div>
           </div>
 
