@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'whatwg-fetch';
 import './App.scss';
 
 class App extends Component {
@@ -10,7 +11,9 @@ class App extends Component {
   
   // init method
   componentDidMount() {
-    this.setState({ fruits : ["apple1","apple2","apple3"]});
+    fetch('https://my-json-server.typicode.com/Igorovsky/my-json-mock-server/items')
+          .then(response =>  response.json())
+          .then(json => this.setState({ fruits : json[0].fruit }));
   }
 
   // render method for this component
