@@ -22,7 +22,9 @@ class ProductList extends Component {
 			<div className="row-grid">
 				{
 					this.state.products.map((product) => {
-						return <Product productInfo={product} key={product.id} />
+						return <Product productInfo={product} 
+										key={product.id} 
+										{...this.props} />
 					})
 				}
 			</div>
