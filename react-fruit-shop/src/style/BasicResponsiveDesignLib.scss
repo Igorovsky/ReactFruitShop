@@ -3,25 +3,47 @@
 *::after {
   box-sizing: border-box;
 }
+
+// theme variables
+$primaryBackground: rgb(40, 44, 52);
+$primaryPageBackground: #fff;
+
 // breakpoints map
 $breakpoints: (
   sm: 26rem,
   md: 40rem,
   lg: 60rem
 );
+
+// number of columns variable
+$items: 12;
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: $primaryBackground;
+}
+
+#root {
+  background-color: $primaryPageBackground;
+  width: 100%;
+  height: 100%;
+}
+
 // media query mixin
 @mixin break($size) {  
   @media (min-width: map-get($breakpoints, $size)) {
     @content;
   }
 }
-// number of columns variable
-$items: 12;
+
 // grid container
 .row-grid {
   display: flex;
   flex-flow: row wrap;
 }
+
 // grid item
 .col-item {
   padding: 0.5rem;
@@ -33,8 +55,14 @@ $items: 12;
     background-color: #ddd;
   }
 }
+
 // loop over the breakpoints
 @each $key, $value in $breakpoints {
+  body {
+    @include break($key) {
+      padding: 0 #{1/$items * 100%} 0 #{1/$items * 100%};
+      }
+  }
   @for $i from 1 through $items {
     .#{$key}-cover-#{$i} {
       @include break($key) {
