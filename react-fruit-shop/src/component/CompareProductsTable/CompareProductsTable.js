@@ -5,16 +5,16 @@ import CompareProductsTableRow from '../CompareProductsTableRow/CompareProductsT
 class CompareProductsTable extends Component {
 
 	state = {
-		prodDataModelForTable : {
-			distinctProperty : "id",
-			headerProperty : {
-				name : "Name"
+		prodDataModelForTable: {
+			distinctProperty: "id",
+			headerProperty: {
+				name: "Name"
 			},
-			rowProperties : {
-		        image : "Image",
-		        price : "Price",
-		        description : "Description",
-		        colour : "Colour"
+			rowProperties: {
+		        image: "Image",
+		        price: "Price",
+		        description: "Description",
+		        colour: "Colour"
 			}
 		}
 	}

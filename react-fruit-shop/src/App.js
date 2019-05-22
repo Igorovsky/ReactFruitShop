@@ -50,10 +50,9 @@ class App extends Component {
         </div>
         <div className="col-item sm-cover-12">
           <div className="row-grid">
-            <div className="col-item sm-cover-12">
-              <p>Compare Products:</p>
+            <div className="col-item sm-cover-12 bigText">
               {
-                this.state.compareProductsList.length>1 && 
+                this.state.compareProductsList.length>0 && 
                 <CompareProductsTable products={this.state.compareProductsList} />
               }
             </div>
