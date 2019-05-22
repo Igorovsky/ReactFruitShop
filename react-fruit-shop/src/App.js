@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProductList from './component/ProductList/ProductList';
+import CompareProductsTable from './component/CompareProductsTable/CompareProductsTable';
 import './App.scss';
 
 class App extends Component {
@@ -51,13 +52,10 @@ class App extends Component {
           <div className="row-grid">
             <div className="col-item sm-cover-12">
               <p>Compare Products:</p>
-              <ul>
-                {
-                  this.state.compareProductsList.map((product) => {
-                    return <li>{product.name}</li>
-                  })
-                }
-              </ul>
+              {
+                this.state.compareProductsList.length>1 && 
+                <CompareProductsTable products={this.state.compareProductsList} />
+              }
             </div>
           </div>
         </div>  
