@@ -10,7 +10,7 @@ const Product = (props) => (
 			<p>Color: //TODO</p>
 		</div>
 		<div>
-			<button onClick={() => props.selectMe(props.productInfo)}>SELECT</button>
+			<button onClick={() => props.selectProduct(props.productInfo)}>SELECT</button>
 		</div>
 	</div>
 );
