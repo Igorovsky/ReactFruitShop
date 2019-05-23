@@ -8,8 +8,12 @@
 $primaryBackground: #fff;
 $primaryPageBackground: #f5f2f2;
 $primaryGreen: rgba(44, 208, 177, 0.83);
+$primaryGrey: #808080;
+$darkGrey: darken( $primaryGrey, 10% );
+$lightGrey: lighten( $primaryGrey, 45% );
+$greySeparator: #67676738;
 
-// Breakpoints map
+// Breakpoints
 $small: 26rem;
 $medium: 40rem;
 $large: 60rem;
@@ -37,7 +41,7 @@ body {
   }
 }
 .greyText {
-  color: grey;
+  color: $darkGrey;
 }
 .greenText {
   color: $primaryGreen;

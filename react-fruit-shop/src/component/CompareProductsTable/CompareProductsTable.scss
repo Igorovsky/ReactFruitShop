@@ -1,0 +1,28 @@
+@import './../../style/BasicResponsiveDesignLib.scss';
+
+.productsTable {
+	width: 100%;
+	background-color: $primaryBackground;
+	border-collapse: collapse;
+	
+	tr {
+		border-bottom: 1px solid $greySeparator;
+	}
+
+	td {
+		padding: 20px;
+		text-align: center;
+	}
+
+	tbody {
+		td {
+			padding: 10px;
+			text-align: center;
+		}
+
+		td:first-child {
+			text-align: left;
+			background-color: $lightGrey;
+		}
+	}
+}

@@ -1,5 +1,6 @@
 import React, {	Component	} from 'react';
 import CompareProductsTableRow from '../CompareProductsTableRow/CompareProductsTableRow';
+import './CompareProductsTable.scss';
 
 
 class CompareProductsTable extends Component {
@@ -11,7 +12,6 @@ class CompareProductsTable extends Component {
 				name: "Name"
 			},
 			rowProperties: {
-		        image: "Image",
 		        price: "Price",
 		        description: "Description",
 		        colour: "Colour"
@@ -21,7 +21,7 @@ class CompareProductsTable extends Component {
 
 	render(){
 		return (
-			<table>
+			<table className="productsTable boxShadow">
 				<thead>
 					<tr>
 						<td key="-1"></td>

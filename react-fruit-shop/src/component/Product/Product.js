@@ -25,7 +25,7 @@ const Product = (props) => (
 					<p>{props.productInfo.description}</p>
 				</div>
 			</div>
-			<span className="overlay centerElement">
+			<span className="overlay">
 				<div className="centerElement">
 					<button className="selectBtn boldText greenText" onClick={() => props.selectProduct(props.productInfo)}>COMPARE</button>
 				</div>

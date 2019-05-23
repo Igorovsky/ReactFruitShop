@@ -14,15 +14,16 @@
 .imageWrapper {
 	position: relative;
 	overflow: hidden;
-}
-.imageWrapper img {
-    width: auto;
-    height: 130px;
-    display: block;
-    margin: auto;
 
-	@media (min-width: $large) {
-		height: 100px;
+	img {
+	    width: auto;
+	    height: 130px;
+	    display: block;
+	    margin: auto;
+
+		@media (min-width: $large) {
+			height: 100px;
+		}
 	}
 }
 .stickToBottom {
