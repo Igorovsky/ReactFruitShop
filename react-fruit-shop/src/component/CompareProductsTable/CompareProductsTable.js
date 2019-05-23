@@ -13,8 +13,7 @@ class CompareProductsTable extends Component {
 			},
 			rowProperties: {
 		        price: "Price",
-		        description: "Description",
-		        colour: "Colour"
+		        description: "Description"
 			}
 		}
 	}
